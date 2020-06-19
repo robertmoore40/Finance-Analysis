@@ -1,2 +1,3 @@
 #pip install pandas_datareader
-#use jupister notebook
+#pip install jupyterlab
+#pip install notebook
