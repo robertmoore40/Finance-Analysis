@@ -36,7 +36,9 @@ def plot():
             value="Equal"
         return value
 
-
+    df["Status"]=[inc_dec(c,o) for c, o in zip(df.Close,df,Open)]
+    df["Middle"]=(df.Open+df.Close)/2
+    df["Height"]=abs(df.Close-df.Open)
 
 if __name__=="__main__":
     app.run(debug=True)
