@@ -32,7 +32,9 @@ def plot():
             value="Increase"
         elif c < o:
             value="Decrease"
-
+        else:
+            value="Equal"
+        return value
 
 
 
