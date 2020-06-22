@@ -14,6 +14,21 @@ def home():
 def about():
     return render_template("about.html")
 
+@app.route('plot')
+def plot():
+    from pandas_datareader import data
+    import datetime
+    from bokeh.plotting import figure, show, output_file
+    from bokeh.embed import components
+    from bokeh.resources import CDN
+
+    start=datetime.datetime(2020,1,1)
+    end=datetime.datetime(2020,5,1)
+
+    df=data.DataReader(name="GOOG", data_source='google', start=start,end=end)
+
+
+
 
 if __name__=="__main__":
     app.run(debug=True)
