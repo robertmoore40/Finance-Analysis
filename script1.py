@@ -27,6 +27,12 @@ def plot():
 
     df=data.DataReader(name="GOOG", data_source='google', start=start,end=end)
 
+    def inc_dec(c,o):
+        if c > o:
+            value="Increase"
+        elif c < o:
+            value="Decrease"
+
 
 
 
